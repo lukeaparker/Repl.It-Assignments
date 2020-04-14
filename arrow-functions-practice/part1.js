@@ -7,7 +7,7 @@ const instructors = [
   ]
   
   // TODO: Transform this into an arrow function.
-  function greet(name) {
+  const greet = (name) => {
     return `Hello, ${name}!`
   }
   
@@ -17,11 +17,10 @@ const instructors = [
    */
   function transform_list(lst, func) {
     new_list = []
-    // TODO: Write a for loop that loops over each item in the list, and for 
-    // each item, calls `func` on that item and appends the result to `new_list`.
-    // HINT: You can use `lst.push(item)` to append a new item to the list.
-  
-    
+    for (let i = 0; i < lst.length; i++) {
+      const new_item = func(lst[i])
+      new_list.push(new_item)
+    }
     return new_list
   }
   
